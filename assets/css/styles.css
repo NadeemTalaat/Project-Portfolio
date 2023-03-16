@@ -79,39 +79,74 @@ header {
 }
 
 main {
-  display: flex;
-  justify-content: space-around;
+
 }
 
 .container {
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   margin: 10px 0px;
 }
 
 .desc {
-  width: 150px;
+  width: 12.5%;
   text-align: right;
-  margin: 0px 10px 0px 100px;
+  margin: 0px 20px 0px 75px;
 }
 
 .desc h1 {
   padding: 0;
   margin: 0;
+  min-width: fit-content;
   font-size: 175%;
   color: var(--tertiary-color);;
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  text-align: right;
 }
 
-.card {
+.content {
   display: flex;
   align-items: center;
+  width: 67.5%;
   margin: 0px 0px;
-  padding: 0px 20px;
+  padding: 0px 0px 0px 20px;
   border-left: 5px solid var(--tertiary-color);
-  margin: 
 }
 
-.card p {
+.content p {
   padding: 5px 0px;
   margin: 0px;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#main-project {
+  flex: 1 1 5;
+}
+
+#contactMe ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+#contactMe li {
+  display: inline;
+  padding: 5px 5px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid var(--primary-color);
+  font-size: 125%;
+  color: var(--secondary-color);
+}
+
+#contactMe li a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -33,6 +33,7 @@ header {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   font-size: 200%;
+  min-width: 335px;
 }
 
 #navbar {
@@ -102,8 +103,6 @@ header {
 }
 
 .content {
-  display: flex;
-  align-items: center;
   width: 67.5%;
   margin: 5px 0px;;
   padding-left: 20px;
@@ -113,12 +112,19 @@ header {
 .content p {
   padding: 5px 0px;
   margin: 0px;
+  overflow: 
+}
+
+#aboutMe h4 {
+  margin: 20px 0px 10px 0px;
+  text-decoration: underline;
 }
 
 #projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 #projects a {
@@ -209,7 +215,10 @@ header {
   background-image: url(../images/project-3.jpeg);
 }
 
-
+#contactInfo {
+  display: flex;
+  align-items: center;
+}
 #contactMe ul {
   display: flex;
   padding: 0;
@@ -230,4 +239,30 @@ header {
 #contactMe li a {
   text-decoration: none;
   color: inherit;
+}
+
+
+@media screen and (max-width: 940px){
+  #navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-around;
+    height: 100%;
+  }
+
+  #navbar a {
+    width: 45%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 790px){
+  body {
+    font-size: 80%;
+  }
+
+  #header-title {
+    min-width: 250px;
+  }
 }

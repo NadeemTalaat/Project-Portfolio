@@ -4,20 +4,19 @@
   --tertiary-color: goldenrod;
 }
 
+/* Expand website to cover all, set font and background color for site */
 body {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgb(216, 188, 147);
 }
 
+/* Expand header to cover entire viewport */
 header {
   width: 100%;
 }
 
-/* header section {
-  display: flex;
-} */
-
+/* Activate flexbox for main header section. Space out name and navigation bar. Vertically center items */
 #header-main {
   display: flex;
   justify-content: space-between;
@@ -27,6 +26,7 @@ header {
   height: 100px;
 }
 
+/* Assign properties to Name section */
 #header-title {
   padding: 5px 15px 5px 50px;
   margin: 0;
@@ -36,11 +36,13 @@ header {
   min-width: 335px;
 }
 
+/* Assign properties to navigation bar */
 #navbar {
   padding: 5px;
   margin: 0px 40px;
 }
 
+/* Remove link formatting for navbar items */
 #navbar a {
   color: var(--primary-color); 
   text-decoration: none;
@@ -48,6 +50,7 @@ header {
   text-align: center;
 }
 
+/* Align navbar items along the same horizontal axis. Add "underline" feature */
 #navbar li {
   display: inline;
   padding: 0px 10px 5px 10px;
@@ -55,6 +58,7 @@ header {
   border-bottom: 3px solid var(--primary-color);
 }
 
+/* Add banner to header sub-section */
 #header-subtitle {
   position: relative;
   display: flex;
@@ -68,6 +72,7 @@ header {
   background-position: center center;
 }
 
+/* Format and position header subtitle text box */
 #header-subtitle h2 {
   position: relative;
   font-size: 125%;
@@ -79,6 +84,7 @@ header {
   margin: 0;
 }
 
+/* container class is for each section in main */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -86,12 +92,14 @@ header {
   margin: 10px 0px;
 }
 
+/* desc is the aside (description) of the section */
 .desc {
   width: 12.5%;
   text-align: right;
   margin: 0px 20px 0px 75px;
 }
 
+/* assign properties to the text in the aside */
 .desc h1 {
   padding: 15px 0px;
   margin: 0;
@@ -102,6 +110,7 @@ header {
   text-align: right;
 }
 
+/* sizing for content of each section */
 .content {
   width: 67.5%;
   margin: 5px 0px;;
@@ -114,11 +123,13 @@ header {
   margin: 0px;
 }
 
+/* add subheading formatting for text in About Me section */
 #aboutMe h4 {
   margin: 20px 0px 10px 0px;
   text-decoration: underline;
 }
 
+/* activate Flexbox for content in Work section and align each card. */
 #projects {
   display: flex;
   flex-wrap: wrap;
@@ -126,11 +137,13 @@ header {
   align-items: center;
 }
 
+/* Removes link formatting for project cards */
 #projects a {
   color: black;
   text-decoration: none;
 }
 
+/* activates flexbox for project card. This enables the positioning of the project description to be near the bottom left of the card */
 .project-card {
   display: flex;
   flex-direction: column;
@@ -138,9 +151,61 @@ header {
   position: relative;
   width: 100%;
   transition: 2s filter;
+  margin: 5px 5px;
   border: 5px solid var(--primary-color);
 }
 
+/* Adds background image formatting to project card. Adds filter to background image*/
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: brightness(30%);
+}
+
+/* Enables highlighting effect for project card hover */
+.project-card:hover::before {
+  filter: brightness(100%);
+  transition: 0.5s;
+}
+
+/* Sets sizing for main project card to be larger than other projects */
+#main-project {
+  position: relative;
+  height: 400px;
+  width: 100%;
+}
+
+/* Sets background image for main project */
+#main-project::before {
+  background-image: url(../images/main-project.jpeg);
+}
+
+/* Sets sizing for projects 2, 3 */
+#project-2, #project-3 {
+  position: relative;
+  box-sizing: border-box;
+  height: 150px;
+  flex: 1;
+}
+
+/* Sets background image for project 2 */
+#project-2::before {
+  background-image: url(../images/project-2.jpeg);
+}
+
+/* Sets background image for project 3 */
+#project-3::before {
+  background-image: url(../images/project-3.jpeg);
+}
+
+/* positions project description relative to bottom left of project card */
 .project-inside {
   position: relative;
   width: fit-content;
@@ -149,10 +214,10 @@ header {
   background-color: var(--primary-color);
 }
 
+/* The following section is for formatting the text in the project description */
 .project-inside h1, .project-inside h2 {
   padding: 0;
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .project-inside h1 {
@@ -166,54 +231,7 @@ header {
   font-style: italic;
 }
 
-.project-card{
-  margin: 5px 5px;
-}
-
-.project-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-image: url(../images/main-project.jpeg); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  filter: brightness(30%);
-}
-
-.project-card:hover::before {
-  filter: brightness(100%);
-  transition: 0.5s;
-}
-
-#main-project {
-  position: relative;
-  height: 400px;
-  width: 100%;
-}
-
-#main-project::before {
-  background-image: url(../images/main-project.jpeg);
-}
-
-#project-2, #project-3 {
-  position: relative;
-  box-sizing: border-box;
-  height: 150px;
-  flex: 1;
-}
-
-#project-2::before {
-  background-image: url(../images/project-2.jpeg);
-}
-
-#project-3::before {
-  background-image: url(../images/project-3.jpeg);
-}
-
+/* Formatting for Contact Information elements */
 #contactInfo {
   display: flex;
   align-items: center;
@@ -241,6 +259,7 @@ header {
 }
 
 
+/* Adds responsive design functionality to web app at multiple screen widths */
 @media screen and (max-width: 940px){
   #navbar {
     display: flex;

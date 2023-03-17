@@ -13,9 +13,9 @@ In the "Work" section, there are links to my GitHub repositories for individual 
 
 In the "Contact Me" section, there are various links to different ways I can be contacted.
 
-![Screenshot of Page](./assets/images/Screenshot.jpeg/)
+![Screenshot of Page](./assets/images/screenshot.jpeg)
 
-Page can alternatively be accessed [here](https://nadeemtalaat.github.io/Horiseon-Landing-Page/).
+Page can alternatively be accessed [here](https://nadeemtalaat.github.io/Project-Portfolio/).
 
 ## Credits
 

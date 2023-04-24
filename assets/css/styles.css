@@ -167,12 +167,12 @@ header {
   background-repeat: no-repeat;
   background-position: center center;
   filter: brightness(30%);
+  transition: 0.25s ease-in-out;
 }
 
 /* Enables highlighting effect for project card hover */
 .project-card:hover::before {
   filter: brightness(100%);
-  transition: 0.5s;
 }
 
 /* Sets sizing for main project card to be larger than other projects */
@@ -188,7 +188,7 @@ header {
 }
 
 /* Sets sizing for projects 2, 3 */
-#project-2, #project-3 {
+#project-2, #project-3, #project-4 {
   position: relative;
   box-sizing: border-box;
   height: 150px;
@@ -203,6 +203,10 @@ header {
 /* Sets background image for project 3 */
 #project-3::before {
   background-image: url(../images/project-3.jpeg);
+}
+
+#project-4::before {
+  background-image: url(../images/project-4.jpeg);
 }
 
 /* positions project description relative to bottom left of project card */
